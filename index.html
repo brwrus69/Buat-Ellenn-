@@ -161,7 +161,7 @@
         padding: 15px 20px;
         border-radius: 12px;
         box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
-        opacity: 0;
+        opacity: 0; 
         animation: fadeInText 2s ease-in forwards;
         animation-delay: 1s;
       }
@@ -234,17 +234,15 @@
     </div>
 
     <div class="music-player">
-      <button onclick="toggleMusic()" id="musicBtn">Dengerin Musiknyaa</button>
+      <button onclick="toggleMusic()" id="musicBtn"> Dengerin Musiknyaa</button>
       <audio id="bgMusic" loop>
-        <source
-          src="SpotiDownloader.com - Komang - Raim Laode.mp3"
-          type="audio/mp3"
-        />
+        <source src="music/SpotiDownloader.com - Komang - Raim Laode.mp3" type="audio/mp3" />
       </audio>
     </div>
 
+
     <div class="gallery">
-      <img src="BRW_0057.jpg" alt="Foto 1" />
+      <img src="BRW_0057.jpg" alt= />
     </div>
 
     <div class="quotes">
@@ -255,26 +253,31 @@
           <br>
           “Kamu sujud ke timur, aku berlutut di gereja… tapi kita berdua jatuh
           cinta di tempat yang sama yaitu hati masing-masing.”<br />
-          br
+          <br>
           “Meskipun kamu nyepi dan aku misa, hatiku tetep ribut mikirin kamu.”
         </p>
       </div>
-
-      <iframe
+      
+      <div class="responsive-iframe">
+        <iframe        
         style="border-radius: 12px; margin-top: 20px"
         src="https://open.spotify.com/embed/playlist/6lFAJHanOArK52H0KILr2u?utm_source=generator"
         width="100%"
-        height="152"
+        height="400"
         frameborder="0"
         allowfullscreen=""
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-      ></iframe>
+        loading="lazy"></iframe>
+      </div>
 
       <div class="after-spotify">Jangan lupa didengerin yaaa 🎶</div>
     </div>
 
     <div id="result">
+      Jangan lupa didengerin sama dimakan yaa bingkisannya, byee 💙
+    </div>
+
+    <div id="closing">
       Jangan lupa didengerin sama dimakan yaa bingkisannya, byee 💙
     </div>
 
