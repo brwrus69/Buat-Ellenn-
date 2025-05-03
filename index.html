@@ -12,7 +12,6 @@
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         color: #f0f0f0;
         text-align: center;
-        position: relative;
         overflow-x: hidden;
       }
 
@@ -58,41 +57,27 @@
         margin-bottom: 25px;
       }
 
-      .music-player {
-        margin-top: 20px;
+      button {
+        padding: 14px 30px;
+        font-size: 1.1rem;
+        background-color: #3c8dbc;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: background 0.3s, transform 0.3s;
       }
 
-      .gallery {
-        margin: 30px 0;
-        position: relative;
-        z-index: 2;
-      }
-
-      .gallery img {
-        width: 90%;
-        max-width: 600px;
-        margin: 10px;
-        border-radius: 15px;
-        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
-        border: 3px solid rgba(255, 255, 255, 0.3);
-        transition: transform 0.4s ease, box-shadow 0.4s ease;
-        animation: fadeUp 1.5s ease-out;
-      }
-
-      .gallery img:hover {
+      button:hover {
+        background-color: #2a6e96;
         transform: scale(1.05);
-        box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
       }
 
-      @keyframes fadeUp {
-        0% {
-          opacity: 0;
-          transform: translateY(40px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
+      button a {
+        text-decoration: none;
+        color: white;
+        display: block;
       }
 
       .quotes {
@@ -134,24 +119,14 @@
         animation: fadeOut 2s forwards 2s;
       }
 
-      button {
-        padding: 14px 30px;
-        font-size: 1.1rem;
-        background-color: #3c8dbc;
-        border: none;
-        border-radius: 10px;
-        color: white;
-        cursor: pointer;
-        margin-top: 10px;
-        transition: background 0.3s, transform 0.3s;
+      @keyframes fadeOut {
+        to {
+          opacity: 0;
+          visibility: hidden;
+        }
       }
 
-      button:hover {
-        background-color: #2a6e96;
-        transform: scale(1.05);
-      }
-
-      #result {
+      #result-text {
         margin: 30px auto;
         max-width: 600px;
         font-size: 1.4rem;
@@ -161,7 +136,7 @@
         padding: 15px 20px;
         border-radius: 12px;
         box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
-        opacity: 0; 
+        opacity: 0;
         animation: fadeInText 2s ease-in forwards;
         animation-delay: 1s;
       }
@@ -169,13 +144,6 @@
       @keyframes fadeInText {
         to {
           opacity: 1;
-        }
-      }
-
-      @keyframes fadeOut {
-        to {
-          opacity: 0;
-          visibility: hidden;
         }
       }
 
@@ -187,10 +155,6 @@
 
         p {
           font-size: 1.1rem;
-        }
-
-        .gallery img {
-          max-width: 95%;
         }
 
         .quotes {
@@ -222,76 +186,53 @@
       }
     </style>
   </head>
+
   <body>
     <div id="intro">Pertama kali dibuatin website sama cowo yaa?? hehe</div>
 
-    <div id="result" class="container">
+    <div class="container">
       <h1>Halo, Ellenn</h1>
       <p>
         Aku ada surat nih buat kamuu, dibaca yaa. Gabakal hilang nih, bisa kamu
         buka dimanapun dan kapanpunn
       </p>
+
+      <button>
+        <a href="https://www.canva.com/design/DAGmTuyIUG8/rXoescwhUE_7TzVzVlZ_Cg/edit?utm_content=DAGmTuyIUG8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">
+          Klik yaa
+        </a>
+      </button>
     </div>
-
-    <div class="music-player">
-      <button onclick="toggleMusic()" id="musicBtn"> Dengerin Musiknyaa</button>
-      <audio id="bgMusic" loop>
-        <source src="music/SpotiDownloader.com - The Night We Met - Lord Huron.mp3" type="audio/mp3" />
-      </audio>
-    </div>
-
-
-<button>
-  <a href="https://www.canva.com/design/DAGmTuyIUG8/rXoescwhUE_7TzVzVlZ_Cg/edit?utm_content=DAGmTuyIUG8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Klik yaa</a>
-</button>
 
     <div class="quotes">
       <div class="quote-box">
         <p>
           “Kita beda keyakinan, tapi aku yakin satu hal. Kamu emang diturunin
-          Tuhan buat bikin aku senyum tiap hari.”<br />
-          <br>
+          Tuhan buat bikin aku senyum tiap hari.”<br /><br />
           “Kamu sujud ke timur, aku berlutut di gereja… tapi kita berdua jatuh
-          cinta di tempat yang sama yaitu hati masing-masing.”<br />
-          <br>
+          cinta di tempat yang sama yaitu hati masing-masing.”<br /><br />
           “Meskipun kamu nyepi dan aku misa, hatiku tetep ribut mikirin kamu.”
         </p>
       </div>
-      
+
       <div class="responsive-iframe">
-        <iframe        
-        style="border-radius: 12px; margin-top: 20px"
-        src="https://open.spotify.com/embed/playlist/6lFAJHanOArK52H0KILr2u?utm_source=generator"
-        width="100%"
-        height="400"
-        frameborder="0"
-        allowfullscreen=""
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"></iframe>
+        <iframe
+          style="border-radius: 12px; margin-top: 20px"
+          src="https://open.spotify.com/embed/playlist/6lFAJHanOArK52H0KILr2u?utm_source=generator"
+          width="100%"
+          height="400"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
       </div>
 
       <div class="after-spotify">Jangan lupa didengerin yaaa 🎶</div>
     </div>
 
-    <div id="result">
+    <div id="result-text">
       Jangan lupa didengerin sama dimakan yaa bingkisannya, byee 💙
     </div>
-
-    <script>
-      const music = document.getElementById("bgMusic");
-      const musicBtn = document.getElementById("musicBtn");
-
-      music.volume = 0.3;
-
-      function toggleMusic() {
-        if (music.paused) {
-          music.play();
-          musicBtn.innerText = "Pause Music";
-        } else {
-          music.pause();
-          musicBtn.innerText = "Play Music";
-        }
-      }
-    </script>
   </body>
 </html>
